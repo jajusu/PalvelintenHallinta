@@ -1,0 +1,2 @@
+xrandr --output Virtual1 --mode 1440x900
+xrandr -o normal

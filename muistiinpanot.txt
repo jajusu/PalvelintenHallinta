@@ -1,0 +1,10 @@
+Palomuurin asennus:
+- Menetettiin yhteys minioniin.
+- Piti käydä restarttaamassa minion, jonka jälkeen yhteys palasi.
+- Lisättiin siis palomuurin init.sls-tiedostoon rivi salt-minionin uudelleenkäynnistykselle, mikäli ufw-tiedostoja on muutettu.
+
+Resoluution asetus:
+- Salt ei ymmärrä komentoa file.append ~/.xprofile, jonka pitäisi luoda tiedost /home/käyttäjä alle, vaan luo sen roottiin eli /.
+- Käytetään komentoa file.append /home/jarkko/.xprofile, joka nyt toimii vaan yhdellä käyttäjällä.
+- Resoluution asetus toimii Debianilla, mutta ei Ubuntulla.
+
