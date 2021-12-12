@@ -60,3 +60,6 @@ joka asentaa yhden ohjelman.
 - Uudelleenkäynnistettiin Salt-minion paikallisesti, ajettiin tilat uudelleen, jonka jälkeen
 kaikki toimi ja päästiin myös SSH:lla sisään.
 - sudo service salt-minion status näyttää Salt-minionin tilan.
+- Jotta Nginx toimisi aina, tulee huolehtia että Apache2 on pois päältä.
+Lisätty Nginx-tiedostoihin
+- Ubuntussa ja Debianissa eri versiot Firefoxista. Tehty sääntö asenna-tiedostoon.

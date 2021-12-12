@@ -16,6 +16,10 @@ luo_asetukset:
     - name: /etc/nginx/sites-enabled/tutorial
     - source: salt://PalvelintenHallinta/tutorial
 
+apache2:
+  service.dead:
+    - enable: True
+
 kaynnista_uudestaan:
   service.running:
     - name: nginx
