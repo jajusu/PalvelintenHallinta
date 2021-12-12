@@ -13,10 +13,8 @@ aseta_nappis:
     - name: /etc/default/keyboard
     - source: salt://PalvelintenHallinta/keyboard
 
-#aseta_nappis2:
-#  cmd:
-#    - run:
-#      - 'setxkbmap fi'
+#setxkbmap fi:
+#  cmd.run
 
 nano_asetukset:
   file.append:

@@ -1,3 +1,7 @@
+asenna_sshd:
+  pkg.installed:
+    - name: openssh-server
+
 ssh_tiedostoa_muokataan:
   file.managed:
     - name: /etc/ssh/sshd_config

@@ -3,7 +3,16 @@ Projektissa automatisoidaan uuden Linux-virtuaalikoneen asetusten ajaminen Salti
 otetaan käyttöön SSH, UFW-palomuuri, Nginx-palvelin ja säädetään niiden asetuksia. Käyttöön voi ottaa joko yhden tai kaikki Saltin
  tiedostot oman tarpeen mukaan.
 
+![tilat ajettu](https://linuxpalvelimet2021syksy.files.wordpress.com/2021/12/proj1.png "Tilat ajettu")
+
 Saltin init.sls-tiedosto sijaitsevat aina omassa kansiossaan lukuunottamatta juuressa olevaa tiedostoa, joka ajaa kaikki tilat kerralla. 
+
+Kaikki kerralla:
+sudo salt 'orjanid' state.apply PalvelintenHallinta
+
+Yksi moduuli:
+sudo salt 'orjanid' state-apply PalvelintenHallinta/asenne
+
 Kaikki erilliset asetustiedostot ja nettisivut jotka kopiodaaan minioneille, sijaitsevat projektin juuressa.
 
 Master-koneena Debian 11 Bullseye ja orjana Ubuntu 20.04.3 LTS Focal Fossa.
@@ -44,3 +53,10 @@ joka asentaa yhden ohjelman.
     3. nginxserver - asentaa Ngingx-serverin, asetukset ja mallisivun
     4. palomuuri - asentaa UFW-palomuurin ja sen asetukset kuntoon 
     5. sshd - ottaa käyttöön ssh:n ja säätää sen asetuksia
+
+# Vaihe 5:
+- Testattu toimivuus Debian 11-orjalla.
+- Orjalla tehtiin halutut asiat, mutta Salt-minion kaatui, eikä SSH-yhteys toiminut.
+- Uudelleenkäynnistettiin Salt-minion paikallisesti, ajettiin tilat uudelleen, jonka jälkeen
+kaikki toimi ja päästiin myös SSH:lla sisään.
+- sudo service salt-minion status näyttää Salt-minionin tilan.
