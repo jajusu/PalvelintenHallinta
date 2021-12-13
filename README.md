@@ -11,7 +11,7 @@ Kaikki kerralla:
 sudo salt 'orjanid' state.apply PalvelintenHallinta
 
 Yksi moduuli:
-sudo salt 'orjanid' state-apply PalvelintenHallinta/asenne
+sudo salt 'orjanid' state.apply PalvelintenHallinta/asenna
 
 Kaikki erilliset asetustiedostot ja nettisivut jotka kopiodaaan minioneille, sijaitsevat projektin juuressa.
 
